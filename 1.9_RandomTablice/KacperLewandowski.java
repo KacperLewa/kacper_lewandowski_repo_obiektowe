@@ -8,7 +8,6 @@ class KacperLewandowski{
         String s = "";
         double points = 0;
         char star = '*';
-        int l = 0;
         StringBuffer sb = new StringBuffer();
         String [][] tab = new String[100][8];
         tab [0][0] = "1. W którym roku odbył się Chrzest Polski?";
@@ -812,6 +811,8 @@ class KacperLewandowski{
                                     tab [98][7] = "7";
                                     tab [99][7] = "1";
         double b = Double.parseDouble(tab[o][7]);
+        double h = b * (1/3);
+        int o2 = r.nextInt(tab[o][6].length());
         System.out.println("Wybierz X jeśli chcesz test z 4 wariantami odpowiedzi, lub wybierz Y jeśli sam podawać odpowiedź");
         String a = sc.nextLine();
         if(a.equals("X")){
@@ -831,42 +832,39 @@ class KacperLewandowski{
         } else if (a.equals("Y")){
             for(int z=0; z<4; z++){
                 b = Double.parseDouble(tab[o][7]);
-                double h = b * 1/3;
-                o = r.nextInt(100);
+                h = b * 1/3;
+                o = r.nextInt(10);
+                s = "";
                 for(int i = 0; i < tab[o][6].length(); i++) {
                     sb.append(tab[o][6]);
                 }
             
-                int o2 = r.nextInt(tab[o][6].length());
-                for(int i=0; i<1; i++){
+                
+                for(int g=0; g<1; g++){
                     System.out.print(tab[o][0]);
                     System.out.println();
                 }
-                for(int i=0; i<tab[o][6].length(); i++){
+                for(int v=0; v<tab[o][6].length(); v++){
                     s = s+star;
                 }
                 System.out.println(s);
                 a = sc.nextLine();
     
-                if (a.equals(tab[o][6])){
-                    points = points+b;
-                } else{
-                    points = points-h;
-                    while (!a.equals(tab[o][6]) && l<2){
+                
+                points = points+b;
+                for(int d=0; d<2; d++){
+                    if (!a.equals(tab[o][6])){
+                        points = points-h;
+                        o2 = r.nextInt(tab[o][6].length());
                         String str = sb.toString();
                         char p = str.charAt(o2);
                         System.out.println("Jedną z liter hasła jest "+p);
-                        points = points-h;
+                    
                         a = sc.nextLine();
-                        l++;
-                    }
-                    if (!a.equals(tab[o][6])){
-                        points = points+3*h;
                     }
                 }
-                s = "";
             }
         }
-        System.out.println("Zdobyłeś tyle punktow: "+points);
+        System.out.println("Zdobyłeś tyle punktów: "+points);
     }
 }
