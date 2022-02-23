@@ -832,7 +832,7 @@ class KacperLewandowski{
         } else if (a.equals("Y")){
             for(int z=0; z<4; z++){
                 b = Double.parseDouble(tab[o][7]);
-                h = b * 1/3;
+                h = b-(1.0/3.0);
                 o = r.nextInt(10);
                 s = "";
                 for(int i = 0; i < tab[o][6].length(); i++) {
@@ -862,6 +862,9 @@ class KacperLewandowski{
                     
                         a = sc.nextLine();
                     }
+                }
+                if (!a.equals(tab[o][6])) {
+                    points = points-h;
                 }
             }
         }
