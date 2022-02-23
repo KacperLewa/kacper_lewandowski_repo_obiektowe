@@ -7,7 +7,6 @@ class KacperLewandowski{
         int o = r.nextInt(100);
         String s = "";
         double points = 0;
-        char star = '*';
         StringBuffer sb = new StringBuffer();
         String [][] tab = new String[100][8];
         tab [0][0] = "1. W którym roku odbył się Chrzest Polski?";
@@ -812,15 +811,14 @@ class KacperLewandowski{
                                     tab [99][7] = "1";
         double b = Double.parseDouble(tab[o][7]);
         double h = b * (1/3);
-        int o2 = r.nextInt(tab[o][6].length());
         System.out.println("Wybierz X jeśli chcesz test z 4 wariantami odpowiedzi, lub wybierz Y jeśli sam podawać odpowiedź");
         String a = sc.nextLine();
         if(a.equals("X")){
             for (int z=0; z<10; z++){
                 for(int i=0; i<1; i++){ 
                     for(int j=0; j<5; j++){ 
-                    System.out.print(tab[o][j]+" ");}
-                System.out.println(); 
+                    System.out.print(tab[o][j]+" ");
+                    System.out.println(); } 
                 }
                 a = sc.nextLine();
                 if (a.equals(tab[o][5])){
@@ -830,38 +828,34 @@ class KacperLewandowski{
                 b = Double.parseDouble(tab[o][7]);
             }
         } else if (a.equals("Y")){
-            for(int z=0; z<4; z++){
+            for(int z=0; z<10; z++){
                 b = Double.parseDouble(tab[o][7]);
-                h = b * 1/3;
-                o = r.nextInt(10);
+                h = b * (1.0/3.0);
+                o = r.nextInt(100);
                 s = "";
-                for(int i = 0; i < tab[o][6].length(); i++) {
-                    sb.append(tab[o][6]);
-                }
-            
+                System.out.print(tab[o][0]);
+                System.out.println();
                 
-                for(int g=0; g<1; g++){
-                    System.out.print(tab[o][0]);
-                    System.out.println();
-                }
                 for(int v=0; v<tab[o][6].length(); v++){
-                    s = s+star;
+                    s = s+"*";
                 }
                 System.out.println(s);
                 a = sc.nextLine();
-    
-                
                 points = points+b;
+                int y = 0;
                 for(int d=0; d<2; d++){
                     if (!a.equals(tab[o][6])){
                         points = points-h;
-                        o2 = r.nextInt(tab[o][6].length());
-                        String str = sb.toString();
-                        char p = str.charAt(o2);
+                        char p = tab[o][6].charAt(r.nextInt(tab[o][6].length()));
                         System.out.println("Jedną z liter hasła jest "+p);
                     
                         a = sc.nextLine();
+                        y = y +1;
                     }
+                }
+                if (!a.equals(tab[o][6])){
+                    points = points+2*h;
+                    points = points-b;
                 }
             }
         }

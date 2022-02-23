@@ -20,7 +20,7 @@ class Wielowodkowosc{
             public void run(){
                 try{
                     while(true){
-                        Thread.sleep(millis 500);
+                        Thread.sleep(millis: 500);
                         counter++;
                         System.out.println("t2"+counter);
                     }
