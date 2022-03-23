@@ -842,7 +842,7 @@ class KacperLewandowski{
                 System.out.println(s);
                 a = sc.nextLine();
                 points = points+b;
-                int y = 0;
+                
                 for(int d=0; d<2; d++){
                     if (!a.equals(tab[o][6])){
                         points = points-h;
@@ -850,7 +850,6 @@ class KacperLewandowski{
                         System.out.println("Jedną z liter hasła jest "+p);
                     
                         a = sc.nextLine();
-                        y = y +1;
                     }
                 }
                 if (!a.equals(tab[o][6])){
