@@ -14,9 +14,9 @@ public class Obliczenia{
         if (delta > 0){
             double x1 = (-b-Math.sqrt(delta))/2*a;
             double x2 = (-b+Math.sqrt(delta))/2*a;
-            return x1+x2;
+            return "Miejsca zerowe: "+x1+" i "+x2;
         }else if (delta < 0){
-            return 0.0;
+            return "Delta mniejsza niż zero";
         }else{
             return -b/2*a;
         }
