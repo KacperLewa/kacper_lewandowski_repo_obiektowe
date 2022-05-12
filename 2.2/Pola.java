@@ -1,27 +1,23 @@
 public class Pola{
-    private double a;
-    private double b;
-    private double h;
 
-    public Pola(double a, double b, double h){
-        this.a = a;
-        this.b = b;
-        this.h = h;
+    public void poleKwadratu(double a){
+        System.out.println(a*a);
     }
 
-    public double poleKwadratu(){
-        return a*a;
+    public double poleTrojkataD(double a, double b, double c){
+        int p = (a+b+c)/2;
+        return Math.sqrt(2, p*(p-a)*(p-b)*(p-c));
     }
 
-    public double poleTrojkataP(){
-        return (a*b)/2;
-    }
-
-    public double poleTrojkataD(){
+    public double poleTrojkataD(double a, double h){
         return (a*h)/2;
     }
 
-    public double poleTrojkataR(){
+    public double poleTrojkataR(double a){
         return (a*a*Math.sqrt(2, 3))/4;
+    }
+
+    public double poleTrojkataR(double a, double h){
+        return 0.5*a*h;
     }
 }
