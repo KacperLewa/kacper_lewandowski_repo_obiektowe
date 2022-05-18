@@ -1,7 +1,7 @@
 public class Pola{
 
-    public void poleKwadratu(double a){
-        System.out.println(a*a);
+    public double poleKwadratu(double a){
+        return a*a;
     }
 
     public double poleTrojkataD(double a, double b, double c){

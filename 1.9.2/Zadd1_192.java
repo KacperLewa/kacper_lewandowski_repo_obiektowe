@@ -1,43 +1,44 @@
+import java.util.ArrayList;
 import java.util.Random;
 class Zadd1_192{
     public static void main (String[] args){
         Random r = new Random();
         int srd = 0;
-        int tab[] = new int [100];
+        ArrayList<Integer> list = new ArrayList<>(2000); 
         //dodawanie
-        for(int i=0; i<tab.length; i++){
-            tab[i]=r.nextInt(10000)+1;
+        for(int i=0; i<2000; i++){
+            list.add(r.nextInt(10000)+1);
         }
         //sortowanie
-        for (int i = 0; i<tab.length; i++) {
-            for (int j = 1; j<tab.length; j++) {
-             if (tab[j]<tab[j-1]) {
-                    int wieksza = tab[j-1];
-                    tab[j-1] = tab[j];
-                    tab[j] = wieksza;
+        for (int i = 0; i<2000; i++) {
+            for (int j = 1; j<2000; j++) {
+             if (list.indexOf(j)<list.indexOf(j-1)) {
+                    int wieksza = list.indexOf(j-1);
+                    wieksza = list.indexOf(j);
+                    
                 }
             }
         }
         //średnia
-        for(int i=0; i<tab.length; i++){
-            srd = srd + tab[i];
+        for(int i=0; i<2000; i++){
+            srd = srd + list.get(i);
         }
         //min
-        int min = tab[0];
-        for (int i = 0; i < tab.length; i++) {
-            if (tab[i] < min) {
-                min = tab[i];
+        int min = list.get(0);
+        for (int i = 0; i < 2000; i++) {
+            if (list.get(i) < min) {
+                min = list.get(i);
             }
         }
         //max
-        int max = tab[0];
-        for (int i = 0; i < tab.length; i++) {
-            if (tab[i] > max) {
-                max = tab[i];
+        int max = list.get(0);
+        for (int i = 0; i < 2000; i++) {
+            if (list.get(i) > max) {
+                max = list.get(i);
             }
         }
-        System.out.println("Średnia wynosi: "+srd/tab.length);
+        System.out.println("Średnia wynosi: "+srd/2000);
         System.out.println("Rozstęp wynosi: "+(max-min));
-        System.out.println("Mediana wynosi: "+tab[tab.length/2]);
+        System.out.println("Mediana wynosi: "+list.indexOf(1000));
     }
 }
