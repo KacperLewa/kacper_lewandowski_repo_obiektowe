@@ -39,6 +39,6 @@ class Zadd1_192{
         }
         System.out.println("Średnia wynosi: "+srd/2000);
         System.out.println("Rozstęp wynosi: "+(max-min));
-        System.out.println("Mediana wynosi: "+list.indexOf(1000));
+        System.out.println("Mediana wynosi: "+list.indexOf(1));
     }
 }
