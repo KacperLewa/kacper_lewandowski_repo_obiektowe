@@ -17,6 +17,7 @@ public class MyStartClass{
         list.add(new Person("Antoni","Musiał"));
         list.add(new Person("Dawid","Gwazdacz"));
         list.add(new Person("Mateusz","Grześków"));
-        
+        Menu m = new Menu();
+        System.out.println(m.menu1());
     }
 }
