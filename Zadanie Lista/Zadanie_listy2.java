@@ -325,10 +325,25 @@ class Zadanie_listy2{
                     }
                     b = b+list.get(i);
                 }
-            } else if (a == 3){
-
-                } else {
-                    System.out.println("Wybrano złą opcje");
+        } else if (a == 3){
+            int wgr = 0;
+            String odp = "";
+            for(int i = 2; i<list.size(); i+=3){
+                String wgr1 = list.get(i);
+                int wgr2 = 0;
+                for(int j=2; j<list.size();j++){
+                    if(odp.equals(list.get(j))){
+                        wgr2++;
                     }
+                }
+                if(wgr2>=wgr){
+                    odp=wgr1;
+                    wgr = wgr2;
+                }
+            }
+            System.out.println(odp);
+        } else {
+            System.out.println("Wybrano złą opcje");
+        }
     }
 }
