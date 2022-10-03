@@ -8,7 +8,6 @@ public class Menu{
     public String menu2(){
         return "1. Wg kolejności wpisania"+"\n"
         +"2. Posortowane rosnąco po imieniu"+"\n"
-        +"3. Posortowane rosnąco po nazwisku"+"\n"
-        +"4. Wróć"+"\n";
+        +"3. Posortowane rosnąco po nazwisku"+"\n";
     }
 }
