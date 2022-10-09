@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class FileUtils{
-    File f = new File("/home/lewandowskikacper/Desktop/PROGRAMOWANIE/kacper_lewandowski_repo_obiektowe/Zad_na_ocene/hit.csv");
+    File f = new File("C:/Users/kacpe/Desktop/PROGRAMOWANIE/obiektowe/Zad_na_ocene/hit.csv");
     private int s;
     public void zapisz(String a, String b){
         try {
@@ -25,7 +25,7 @@ public class FileUtils{
             while(sc.hasNext()){
                 data += sc.nextLine()+System.lineSeparator();  
             }
-            if(data.contains(a+" "+b)){
+            if(data.contains(b)){
                 
                 s=1;
             } else {
@@ -42,5 +42,14 @@ public class FileUtils{
 
     public void setData(int d){
         this.s=d;
+    }
+
+    public void czysc(){
+        try {
+            FileWriter fw = new FileWriter(f, false);
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(MyStartClass.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }
 }
