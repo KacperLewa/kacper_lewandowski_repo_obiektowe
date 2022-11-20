@@ -1,3 +1,3 @@
-public class ShowDane{
+public class ShowDane extends DUM{
     
 }

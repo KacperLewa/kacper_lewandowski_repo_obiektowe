@@ -1,13 +1,20 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
+import java.io.File;
+import java.util.Scanner;
 public class CRUD{
     public static void main(String[] args) {
-        ArrayList<UserDate> list = new ArrayList();
+        File f = new File("C:/Users/kacpe/Desktop/PROGRAMOWANIE/obiektowe/CRUD/tajne_dane.csv");
+        Scanner sc = new Scanner(System.in);
         Menu_CRUD m = new Menu_CRUD();
-        UserDate ud = new UserDate("123","Kacper", "Lewandows", LocalDate.of(2020, 11, 4));
-        System.out.println(m.menu());
-        for(int i=0; i<ud.getArList().size(); i++){
-            System.out.println(ud.getArList().get(i));
-        }
+        DUM dum = new DUM();
+        UserDate ud = new UserDate();
+        ShowDane sd = new ShowDane();
+        SaveRead sr = new SaveRead();
+        ud.siema();
+        ud.chuj();
+        dum.addToList();
+        sr.zapisz();
+        ud.chuj();
     }
 }
