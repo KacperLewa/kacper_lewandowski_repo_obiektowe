@@ -11,10 +11,7 @@ public class CRUD{
         UserDate ud = new UserDate();
         ShowDane sd = new ShowDane();
         SaveRead sr = new SaveRead();
-        ud.siema();
-        ud.chuj();
         dum.addToList();
-        sr.zapisz();
-        ud.chuj();
+        dum.delFromList();
     }
 }

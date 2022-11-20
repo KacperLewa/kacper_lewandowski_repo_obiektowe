@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class UserDate{
-    private ArrayList<UserDate> list = new ArrayList<UserDate>();
+    private ArrayList<UserDate> list = new ArrayList<UserDate>();;
     private String name;
     private String surname;
     private String email;
@@ -57,15 +57,14 @@ public class UserDate{
         this.list = list;
     }
 
-    public void siema(){
-        UserDate chuj = new UserDate("s", "s", "s", "s");
-        list.add(chuj);
-    }
-
-    public void chuj(){
+    public void test(){
         for(int i=0; i<list.size(); i++){
             System.out.println(list.get(i)+"\n");
         }
+    }
+
+    public void daj(UserDate ud){
+        list.add(ud);
     }
 
     @Override

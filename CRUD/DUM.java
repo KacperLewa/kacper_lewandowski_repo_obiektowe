@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class DUM extends UserDate{
+public class DUM extends SaveRead{
 
     public void addToList(){
         Scanner sc = new Scanner(System.in);
@@ -16,9 +16,14 @@ public class DUM extends UserDate{
         //LocalDate bi = LocalDate.parse(sc.next());
         String bi = sc.nextLine();
         //System.out.println(ur);
-        getList().add(new UserDate(a, b, c, bi));
+        this.daj(new UserDate(a, b, c, bi));
         /*for(int i=0; i<getList().size(); i++){
             System.out.println(getList().get(i)+"\n");
         }*/
+        zapisz();
+    }
+
+    public void delFromList(){
+        odczyt();
     }
 }
