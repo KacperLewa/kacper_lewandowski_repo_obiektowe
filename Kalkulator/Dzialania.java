@@ -40,10 +40,10 @@ public class Dzialania{
     }
 
     public int potega(){
-        return Math.pow(a, b);
+        return (int)Math.round(Math.pow(a, b));
     }
 
     public int pierwiastek(){
-        return Math.sqrt(a, b);
+        return (int)Math.round(Math.pow(a, 1.0/b));
     }
 }
