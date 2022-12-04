@@ -1,6 +1,11 @@
+import java.io.NumberFormatException;
 public class Dzialania{
     private int a;
     private int b;
+
+    public Dzialania(){
+        
+    }
 
     public Dzialania(int a, int b){
         this.a = a;
@@ -45,5 +50,17 @@ public class Dzialania{
 
     public int pierwiastek(){
         return (int)Math.round(Math.pow(a, 1.0/b));
+    }
+
+    public boolean isInt(String s)
+    {
+        try
+        {
+            Integer.parseInt(s);
+            return true;
+        } catch (NumberFormatException ex)
+        {
+            return false;
+        }
     }
 }

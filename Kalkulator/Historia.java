@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter; 
 public class Historia{
-    File f = new File("/home/lewandowskikacper/Desktop/PROGRAMOWANIE/kacper_lewandowski_repo_obiektowe/Kalkulator/historia.txt");
+    File f = new File("C:/Users/kacpe/Desktop/PROGRAMOWANIE/obiektowe/Kalkulator/historia.txt");
     private int s;
     public void zapisz(String a){
         a = a.replaceAll(" ", "");

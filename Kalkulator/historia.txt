@@ -4,3 +4,13 @@
 2022/11/28 12:30:22;Otworzonopomoc
 2022/11/28 12:30:25;OtworzonohistoriÄ™
 2022/11/28 12:30:30;ZamkniÄ™toprogram
+2022/12/03 15:36:55;Otworzonoprogram
+2022/12/03 15:36:59;2+2=4
+2022/12/03 15:40:04;Otworzonoprogram
+2022/12/03 15:40:07;3+1=4
+2022/12/03 15:41:26;2*3=5
+2022/12/03 15:41:30;Zamkniêtoprogram
+2022/12/03 15:42:18;Otworzono_program
+2022/12/03 15:42:21;Otworzono_historiê
+2022/12/03 15:42:29;2+2=4
+2022/12/03 15:42:31;Zamkniêto_program
