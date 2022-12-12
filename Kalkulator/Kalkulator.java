@@ -32,6 +32,7 @@ public class Kalkulator{
                     char w = d.charAt(i);
                     if(tab.contains(w)){
                         z = w;
+                        break;
                     }
                 }
                 if(z != ' '){

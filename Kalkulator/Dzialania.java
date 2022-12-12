@@ -1,4 +1,6 @@
 import java.io.NumberFormatException;
+import java.math.BigInteger;
+import java.math.BigDecimal;
 public class Dzialania{
     private int a;
     private int b;
@@ -48,8 +50,9 @@ public class Dzialania{
         return (int)Math.round(Math.pow(a, b));
     }
 
-    public int pierwiastek(){
-        return (int)Math.round(Math.pow(a, 1.0/b));
+    public BigDecimal pierwiastek(){
+        //return (Math.pow(a, 1.0/b));
+        return BigDecimal.valueOf((Math.pow(a, 1.0/b)));
     }
 
     public boolean isInt(String s)

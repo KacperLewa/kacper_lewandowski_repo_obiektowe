@@ -14,3 +14,12 @@
 2022/12/03 15:42:21;Otworzono_historiê
 2022/12/03 15:42:29;2+2=4
 2022/12/03 15:42:31;Zamkniêto_program
+2022/12/05 10:01:00;Otworzono_program
+2022/12/05 10:02:56;Otworzono_program
+2022/12/05 10:03:51;Otworzono_program
+2022/12/05 10:03:54;2@2=4
+2022/12/05 10:04:12;5@2=7
+2022/12/05 10:05:09;ZamkniÄ™to_program
+2022/12/05 10:05:31;Otworzono_program
+2022/12/05 10:05:37;5@2=7
+2022/12/05 10:05:51;ZamkniÄ™to_program

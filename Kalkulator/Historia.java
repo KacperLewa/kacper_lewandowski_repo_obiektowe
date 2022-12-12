@@ -8,8 +8,7 @@ import java.util.logging.Logger;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter; 
 public class Historia{
-    File f = new File("C:/Users/kacpe/Desktop/PROGRAMOWANIE/obiektowe/Kalkulator/historia.txt");
-    private int s;
+    File f = new File("historia.txt");
     public void zapisz(String a){
         a = a.replaceAll(" ", "");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"); 
@@ -19,7 +18,7 @@ public class Historia{
             fw.write(dtf.format(now)+";"+a+"\n");
             fw.close();
         } catch (IOException ex) {
-            Logger.getLogger(MyStartClass.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Dzialania.class.getName()).log(Level.SEVERE, null, ex);
         }  
     }
 
@@ -31,7 +30,7 @@ public class Historia{
                 data += sc.nextLine()+System.lineSeparator();  
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(MyStartClass.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Dzialania.class.getName()).log(Level.SEVERE, null, ex);
         }
         return data;
     }
