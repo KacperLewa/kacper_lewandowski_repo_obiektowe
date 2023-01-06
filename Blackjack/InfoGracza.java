@@ -1,5 +1,7 @@
 public class InfoGracza extends LogikaGry{
-    public void dobranaKarta(){
-        System.out.println("Dobrałeś "+dobierz());
+    public void kartaGracza(){
+        System.out.println("Dobrałeś "+getCard()+".\n Masz "+getGraczPKT()+" PKT.\n HIT or STAND? \n");
     }
+
+    
 }

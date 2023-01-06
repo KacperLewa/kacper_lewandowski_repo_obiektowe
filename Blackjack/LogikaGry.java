@@ -1,11 +1,17 @@
+import java.util.Date;
 public class LogikaGry extends LosowanieKart{
     private int graczPKT;
     private int krupierPKT;
     private int pkt;
-
-    public int dobierz(){
-        pkt = getList().get(0);
+    private String card;
+    
+    public void dobierz(){
+        card = getList().get(0).getCardName();
+        pkt = getList().get(0).getCardValue();
         usunKarte();
+    }
+
+    public int getPKT(){
         return pkt;
     }
 
@@ -23,5 +29,32 @@ public class LogikaGry extends LosowanieKart{
 
     public void setKrupierPKT(int krupierPKT){
         this.krupierPKT = krupierPKT;
+    }
+
+    public String getCard(){
+        return card;
+    }
+
+    public void graKrupiera(){
+        while(getKrupierPKT()<=13){
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            dobierz();
+            setKrupierPKT(getKrupierPKT()+getPKT());
+            System.out.println("Krupier dobrał "+getCard()+". Ma "+getKrupierPKT()+" PKT.\n");
+        }
+    }
+
+    public boolean wynik(){
+        if(getKrupierPKT()>21){
+            return false;
+        } else if(getKrupierPKT()>getGraczPKT()){
+            return false;
+        } else{
+            return true;
+        }
     }
 }

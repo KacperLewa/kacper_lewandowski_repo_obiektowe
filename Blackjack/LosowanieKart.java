@@ -1,46 +1,37 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class LosowanieKart{
-    private int dwa = 2;
-    private int trzy = 3;
-    private int cztery = 4;
-    private int piec = 5;
-    private int szesc = 6;
-    private int siedem = 7;
-    private int osiem = 8;
-    private int dziewiec = 9;
-    private int dziesiec = 10;
-    private int walet = 10;
-    private int dama = 10;
-    private int krol = 10;
-    private int as = 11;
-    private ArrayList<Integer> list = new ArrayList<Integer>();
-    
+public class LosowanieKart extends Card{
+    private ArrayList<Card> list = new ArrayList<>();
+
     public void losuj(){
         for(int i=0; i<4; i++){
-            list.add(dwa);
-            list.add(trzy);
-            list.add(cztery);
-            list.add(piec);
-            list.add(szesc);
-            list.add(siedem);
-            list.add(osiem);
-            list.add(dziewiec);
-            list.add(dziesiec);
-            list.add(walet);
-            list.add(dama);
-            list.add(krol);
-            list.add(as);
+            list.add(new Card("Dwójkę", 2));
+            list.add(new Card("Trójkę", 3));
+            list.add(new Card("Czwórkę", 4));
+            list.add(new Card("Piątkę", 5));
+            list.add(new Card("Szóstkę", 6));
+            list.add(new Card("Siódemkę", 7));
+            list.add(new Card("Ósemkę", 8));
+            list.add(new Card("Dziewiątkę", 9));
+            list.add(new Card("Dziesiątkę", 10));
+            list.add(new Card("Waleta", 10));
+            list.add(new Card("Damę", 10));
+            list.add(new Card("Króla", 10));
+            list.add(new Card("Asa", 1));
         }
         Collections.shuffle(list);
+        /*for(int q=0; q<40; q++){
+            System.out.println(list.get(q).getCardValue());
+        }*/
     }
+    
 
     public void usunKarte(){
         list.remove(0);
     }
 
-    public ArrayList<Integer> getList(){
+    public ArrayList<Card> getList(){
         return list;
     }
 }
