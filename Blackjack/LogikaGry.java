@@ -36,7 +36,8 @@ public class LogikaGry extends LosowanieKart{
     }
 
     public void graKrupiera(){
-        while(getKrupierPKT()<=14){
+        setKrupierPKT(0);
+        while(getKrupierPKT()<=getGraczPKT() && getKrupierPKT()<21){
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {

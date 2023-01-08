@@ -21,7 +21,9 @@ public class Blackjack{
                 ig.dobierz();
                 ig.setGraczPKT(ig.getPKT());
                 ig.kartaGracza();
-                while(ig.getGraczPKT()<21){
+                ig.setGraczPKT(0);
+                int stand = 0;
+                while(ig.getGraczPKT()<21 && stand==0){
                     String a = sc.nextLine();
                     a = a.toUpperCase();
                     if(a.equals("HIT") && ig.getGraczPKT()<21){
@@ -29,7 +31,7 @@ public class Blackjack{
                         ig.setGraczPKT(ig.getGraczPKT()+ig.getPKT());
                         ig.kartaGracza();
                     } else{
-                        break;
+                        stand=1;
                     }
                 }
                 if(ig.getGraczPKT()>21){
